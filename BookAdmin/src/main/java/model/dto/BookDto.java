@@ -15,5 +15,5 @@ public class BookDto {
 	private String bwriter;
 	private String bcompany;
 	private String indate;
-	private String update;
+	private String putdate;
 }
