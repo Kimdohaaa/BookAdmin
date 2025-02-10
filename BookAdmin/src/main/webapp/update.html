@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 수정 페이지</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h3>도서 수정</h3>
+        <br>
+        <p>도서 이름:</p>
+        <input type="text" id="bookName" class="form-control"/>
+        <br>
+        <p>저자:</p>
+        <input type="text" id="bookWriter" class="form-control"/>
+        <br>
+        <p>출판사:</p>
+        <input type="text" id="bookCompany" class="form-control"/>
+        <br>
+        <button class='btn btn-primary' onclick="onUpdate()">수정</button>
+    </div>
+    
+    <script src="js/update.js"></script>
+</body>
+
+</html>
