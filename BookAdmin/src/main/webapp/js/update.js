@@ -1,9 +1,12 @@
 const getBook = () => {
-    let bname = document.querySelector('#bookName').value;
+	const bno = new URL(location.href).searchParams.get('bno');
+
+	 let bname = document.querySelector('#bookName').value;
     let bwriter = document.querySelector('#bookWriter').value;
     let bcompany = document.querySelector('#bookCompany').value;
 
     return {
+		bno : bno,
         bname: bname,
         bwriter: bwriter,
         bcompany: bcompany
@@ -11,10 +14,11 @@ const getBook = () => {
 }
 
 const onUpdate = async () => {
+	
     try {
         const dto = getBook();
-        console.log(`onUpdate: ${dto.bname} ${dto.bwriter} ${dto.bcompany}`);
-
+        console.log(`onUpdate: ${dto.bno} ${dto.bname} ${dto.bwriter} ${dto.bcompany}`);
+		console.log(dto);
         const option = {
             method: 'PUT',
             headers: {

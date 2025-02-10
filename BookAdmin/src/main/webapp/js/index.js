@@ -74,7 +74,7 @@ const onDelete = async (bno) => {
     try {
         const option = { method: 'DELETE' };
         const response = await fetch(`/BookAdmin/book?bno=${bno}`, option);
-        const dto = await response.json();
+        const result = await response.json();
 
         if (result == true) {
             alert('도서 삭제 성공');
